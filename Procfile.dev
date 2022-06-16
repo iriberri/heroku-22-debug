@@ -1,0 +1,3 @@
+web: bin/rails server -p 3000
+redis-sidekiq: redis-server --port 6382 --maxmemory-policy noeviction --loglevel warning
+worker: bundle exec sidekiq -c 8 -t 25 -q default

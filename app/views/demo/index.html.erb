@@ -1,2 +1,10 @@
 <h1>Demo</h1>
-<p>Click here to do something:</p>
+<p>On page load executes DemoJob.perform_async</p>
+<p>class DemoJob</p>
+<p>include Sidekiq::Worker</p>
+<p>sidekiq_options retry: 3</p>
+
+<p>def perform</p>
+<p>logger.info 'Running the Demo Job!!!!'</p>
+<p>end</p>
+<p>end</p>

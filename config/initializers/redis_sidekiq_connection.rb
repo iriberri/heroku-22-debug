@@ -6,8 +6,8 @@ module RedisSidekiqConnection
   end
 
   def self.config_options
-    if ENV['REDIS_URL'].present?
-      { url: ENV['REDIS_URL'] }.merge(connection_options)
+    if ENV['REDIS_TLS_URL'].present?
+      { url: ENV['REDIS_TLS_URL'] }.merge(connection_options)
     elsif Rails.env.test?
       { url: 'redis://127.0.0.1:6380' }.merge(connection_options)
     else

@@ -7,13 +7,13 @@
   ],
   "stack": "heroku-22",
   "addons": [
-    "heroku-redis",
+    "honeybadger",
     {
       "plan": "heroku-redis:premium-0",
       "as": "REDIS_TLS"
     },
     {
-      "plan": "heroku-postgresql"
+      "plan": "heroku-postgresql:hobby-dev"
     }
   ]
 }

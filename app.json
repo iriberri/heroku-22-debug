@@ -1,0 +1,19 @@
+{
+  "name": "Redis EOF SSL errors repro",
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "stack": "heroku-22",
+  "addons": [
+    "heroku-redis",
+    {
+      "plan": "heroku-redis:premium-0",
+      "as": "REDIS_TLS"
+    },
+    {
+      "plan": "heroku-postgresql"
+    }
+  ]
+}

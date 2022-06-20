@@ -9,8 +9,7 @@
   "addons": [
     "honeybadger",
     {
-      "plan": "heroku-redis:premium-0",
-      "as": "REDIS_TLS"
+      "plan": "heroku-redis:hobby-dev"
     },
     {
       "plan": "heroku-postgresql:hobby-dev"
